@@ -1,0 +1,18 @@
+@(siswa : play.data.Form[Siswa])
+
+@main("Welcome to Play") {
+	@if(siswa.value().isDefined()){
+		
+	}else {
+		<h1>Please insert data</h1>
+		@helper.form(action = routes.Application.post){
+			@helper.inputText(siswa("nim"))
+			@helper.inputText(siswa("name"))
+			@helper.inputText(siswa("address"),'_label -> "Alamat")
+			
+			<input type="submit" name="send" value="Save" />
+		}
+	}
+	
+	
+}
