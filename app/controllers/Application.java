@@ -55,7 +55,7 @@ public class Application extends Controller {
     		Siswa siswa = Json.fromJson(json, Siswa.class);
     		return ok();
     	}
-    	
+    	// aku menambah komentar
     }
 
 }
